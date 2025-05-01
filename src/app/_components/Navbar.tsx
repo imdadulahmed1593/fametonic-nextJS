@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <nav className="mt-8 lg:my-8">
-      <div className="max-w-7xl mx-auto px-6 ">
+      <div className="max-w-7xl mx-auto px-6 lg:px-20 ">
         <div className="flex justify-between items-center lg:items-start relative">
           {/* Logo */}
           <div className="md:static absolute left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0">
