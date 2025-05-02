@@ -66,26 +66,28 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden pt-8">
-            <div className="flex flex-col space-y-4">
-              <Link
-                href="/about"
-                className="text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              <Link
-                href="/contact"
-                className="text-gray-300 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col space-y-4 pt-8">
+            <Link
+              href="/about"
+              className="text-gray-300 hover:text-white transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact"
+              className="text-gray-300 hover:text-white transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
